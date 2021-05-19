@@ -1,31 +1,33 @@
 class Solution:
-    #working on O(1) space, O(n) time solution
+    #O(1) space, O(n) time solution
     def isPalindrome(self, s: str) -> bool:
         start = 0 
         end = len(s) - 1 
         result = True
         
         while start<=end:
-            while not s[start].isalpha() or not s[start].isdigit():
+            while start<=end:
+                if s[start].isalpha() or s[start].isdigit():
+                    break
                 start+=1
-                if start>=end:
+            
+            while start<=end:
+                if s[end].isalpha() or s[end].isdigit():
                     break
-
-            while not s[end].isalpha() or not s[end].isdigit():
                 end-=1
-                if end<=start:
-                    break
-                    
+            
+            if start>=end:
+                break
+                
             if s[start].lower()!=s[end].lower():
                 result=False
                 break
-            else:
-                start+=1
-                end-=1
-            if start==end:
-                break
+
+            start+=1
+            end-=1
                 
         return result
+
 
     #O(n) - space, O(n) - time
     def isPalindrome(self, s: str) -> bool:
