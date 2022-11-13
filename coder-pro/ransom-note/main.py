@@ -3,7 +3,7 @@
 class Solution(object):
   def canSpell(self, magazine, word):
     result = True
-    mag_dict = {}
+    mag_dict = {} #could also do defaultdict(int), but have to import "from collections import defaultdict"
 
     for letter in magazine:
         mag_dict[letter] = mag_dict.get(letter, 0) + 1
