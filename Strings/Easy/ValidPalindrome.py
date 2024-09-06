@@ -44,3 +44,26 @@ class Solution:
                 return False
             end-=1
         return True
+    
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        p1 = 0
+        p2 = len(s)-1
+        while p1<p2:
+            while not s[p1].isalpha() and not s[p1].isnumeric() and p1 < p2:
+                p1+=1
+            while not s[p2].isalpha() and not s[p2].isnumeric() and p1 < p2:
+                p2-=1
+            print(p1,p2)
+            if p1<p2:
+                print("hit",p1,p2)
+                if s[p1].lower()!=s[p2].lower():
+                    return False
+            p1+=1
+            p2-=1
+
+        return True
