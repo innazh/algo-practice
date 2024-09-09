@@ -23,6 +23,16 @@ class Solution(object):
             return hash_set[int(middle_idx)]
         return hash_set[middle_idx+1]
     
-
-# first try lmao....
+# solution#2, slow and fast ponters
+class Solution(object):
+    def middleNode(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        slow,fast=head,head
+        while fast and fast.next:
+            fast=fast.next.next
+            slow=slow.next
+        return slow
         
