@@ -1,3 +1,7 @@
+# This was my first attempt at the problem. Although this is not EXACTLY O(1), this makes me really proud 'cause I reasoned through it myself
+# without any hints, help or lookups. What makes it even better (in my opinion), is that it's definetely not the "right"/ideal solution which
+# other people typically come up with and use in the explanation videos. I understood & solved it my own way. 
+# I'll still go through the more 'optimal' solution in a bit.
 class NumMatrix(object):
     def __init__(self, matrix):
         """
