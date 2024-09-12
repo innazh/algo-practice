@@ -11,6 +11,9 @@ class Solution(object):
         # as we're going through the array, we're recording the on-going running sum and all the prefix sums that we've encountered thus far.
         # this allows us to see if we've encountered a prefix sum before, subtracting which from the current running sum, will result in the subarray
         # that sums up to k
+
+        # this lowkey reminds me of two sum
+        # storing ecountered vals in a hashmap and looking back, checking if there's the diff we're looking for, while iterating forward
         for num in nums:
             currSum += num
             diff = currSum - k
