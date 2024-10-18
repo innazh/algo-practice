@@ -15,7 +15,7 @@ class Solution:
             if cur:
                 stack.append(cur)
                 cur = cur.left
-            elif stack:
+            else:
                 cur = stack.pop()
                 result.append(cur.val)
                 cur=cur.right
