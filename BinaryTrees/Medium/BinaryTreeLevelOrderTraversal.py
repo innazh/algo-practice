@@ -25,3 +25,23 @@ class Solution:
                     queue.append(node.right)
             result.append(currentLvl)
         return result
+    
+    
+        # can also use deque:
+        #     queue = deque()
+        # result = []
+
+        # if root:
+        #     queue.append(root)
+
+        # while queue:
+        #     curr_list = []
+        #     for i in range(len(queue)):
+        #         curr = queue.popleft()
+        #         curr_list.append(curr.val)
+        #         if curr.left:
+        #             queue.append(curr.left)
+        #         if curr.right:
+        #             queue.append(curr.right)
+        #     result.append(curr_list)
+        # return result
